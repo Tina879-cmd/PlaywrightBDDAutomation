@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="1f4f5119-666b-4d2e-a31b-8104de85b416" name="ManishPatil@MANISH 2025-09-29 14:14:51" runUser="MANISH\ManishPatil" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2025-09-29T14:14:51.3687034+02:00" queuing="2025-09-29T14:14:51.3687044+02:00" start="2025-09-29T14:13:37.7953373+02:00" finish="2025-09-29T14:16:33.4690373+02:00" />
+  <TestSettings name="default" id="e70739d5-107b-4285-a17c-5b304a87a3fb">
+    <Deployment runDeploymentRoot="ManishPatil_MANISH_2025-09-29_14_14_51" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="990c8da0-9092-4e8d-9b96-f0f917a3e740" testId="e1c1ac66-2baf-bbf0-94fe-fac1503e4dcc" testName="TransferFundsBetweenCheckingAndSavings" computerName="MANISH" duration="00:00:40.1492230" startTime="2025-09-29T14:15:26.1552096+02:00" endTime="2025-09-29T14:16:06.3044412+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="990c8da0-9092-4e8d-9b96-f0f917a3e740">
+      <Output>
+        <StdOut>Given Logged in successfully with valid credentials&#xD;
+-&gt; done: LoginStepDefinitions.ValidCredentialsLogin() (3.1s)&#xD;
+Given I navigate to the transfer funds page&#xD;
+-&gt; done: TransferFundsSteps.GivenOnTransferPage() (0.2s)&#xD;
+When I transfer 50.00 from account "13455" to account "13566"&#xD;
+-&gt; error: Timeout 30000ms exceeded.&#xD;
+Call log:&#xD;
+  - waiting for Locator("select[id='toAccountId']")&#xD;
+    - locator resolved to &lt;select class="input" id="toAccountId"&gt;…&lt;/select&gt;&#xD;
+  - attempting select option action&#xD;
+    2 × waiting for element to be visible and enabled&#xD;
+      - did not find some options&#xD;
+    - retrying select option action&#xD;
+    - waiting 20ms&#xD;
+    2 × waiting for element to be visible and enabled&#xD;
+      - did not find some options&#xD;
+    - retrying select option action&#xD;
+      - waiting 100ms&#xD;
+    52 × waiting for element to be visible and enabled&#xD;
+       - did not find some options&#xD;
+     - retrying select option action&#xD;
+       - waiting 500ms (30.3s)&#xD;
+Error message not found before screenshot: Timeout 3000ms exceeded.&#xD;
+Call log:&#xD;
+  - waiting for Locator("#rightPanel .error") to be visible&#xD;
+    11 × locator resolved to 3 elements. Proceeding with the first one: &lt;p class="error" id="amount.errors"&gt;↵⇆⇆⇆The amount cannot be empty. ↵⇆⇆&lt;/p&gt;&#xD;
+Then I should be able to view a confirmation message "Transfer Complete!"&#xD;
+-&gt; skipped because of previous errors</StdOut>
+        <ErrorInfo>
+          <Message>System.TimeoutException : Timeout 30000ms exceeded.&#xD;
+Call log:&#xD;
+  - waiting for Locator("select[id='toAccountId']")&#xD;
+    - locator resolved to &lt;select class="input" id="toAccountId"&gt;…&lt;/select&gt;&#xD;
+  - attempting select option action&#xD;
+    2 × waiting for element to be visible and enabled&#xD;
+      - did not find some options&#xD;
+    - retrying select option action&#xD;
+    - waiting 20ms&#xD;
+    2 × waiting for element to be visible and enabled&#xD;
+      - did not find some options&#xD;
+    - retrying select option action&#xD;
+      - waiting 100ms&#xD;
+    52 × waiting for element to be visible and enabled&#xD;
+       - did not find some options&#xD;
+     - retrying select option action&#xD;
+       - waiting 500ms</Message>
+          <StackTrace>   at Microsoft.Playwright.Transport.Connection.InnerSendMessageToServerAsync[T](ChannelOwner object, String method, Dictionary`2 dictionary, Boolean keepNulls) in /_/src/Playwright/Transport/Connection.cs:line 201&#xD;
+   at Microsoft.Playwright.Transport.Connection.WrapApiCallAsync[T](Func`1 action, Boolean isInternal, String title) in /_/src/Playwright/Transport/Connection.cs:line 499&#xD;
+   at Microsoft.Playwright.Core.Frame.SelectOptionAsync(String selector, IEnumerable`1 values, FrameSelectOptionOptions options) in /_/src/Playwright/Core/Frame.cs:line 208&#xD;
+   at TransferFundsPage.TransferAsync(String amount, String fromAccount, String toAccount) in C:\Users\ManishPatil\Pictures\PlaywrightC#\PlaywrightBDDAutomation-latest\ParabankBDDAutomation\src\Pages\TransferFundsPage.cs:line 20&#xD;
+   at TransferFundsSteps.WhenTransfer(String amount, String fromAccount, String toAccount) in C:\Users\ManishPatil\Pictures\PlaywrightC#\PlaywrightBDDAutomation-latest\ParabankBDDAutomation\src\StepDefinitions\TransferFundsStepDefinitions.cs:line 28&#xD;
+   at Reqnroll.Bindings.AsyncMethodHelper.ConvertTaskOfT(Task task, Boolean getValue)&#xD;
+   at Reqnroll.Bindings.BindingDelegateInvoker.InvokeDelegateAsync(Delegate bindingDelegate, Object[] invokeArgs, ExecutionContextHolder executionContext)&#xD;
+   at Reqnroll.Bindings.BindingInvoker.InvokeBindingAsync(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, DurationHolder durationHolder)&#xD;
+   at Reqnroll.Infrastructure.TestExecutionEngine.ExecuteStepMatchAsync(BindingMatch match, Object[] arguments, DurationHolder durationHolder)&#xD;
+   at Reqnroll.Infrastructure.TestExecutionEngine.ExecuteStepAsync(IContextManager contextManager, StepInstance stepInstance)&#xD;
+   at Reqnroll.Infrastructure.TestExecutionEngine.OnAfterLastStepAsync()&#xD;
+   at Reqnroll.TestRunner.CollectScenarioErrorsAsync()&#xD;
+   at PlaywrightBDDAutomation.Features.TransferFundsFeature.ScenarioCleanupAsync()&#xD;
+   at PlaywrightBDDAutomation.Features.TransferFundsFeature.TransferFundsBetweenCheckingAndSavings() in C:\Users\ManishPatil\Pictures\PlaywrightC#\PlaywrightBDDAutomation-latest\ParabankBDDAutomation\Features\TransferFunds.feature:line 12&#xD;
+   at NUnit.Framework.Internal.TaskAwaitAdapter.GenericAdapter`1.BlockUntilCompleted()&#xD;
+   at NUnit.Framework.Internal.MessagePumpStrategy.NoMessagePumpStrategy.WaitForCompletion(AwaitAdapter awaiter)&#xD;
+   at NUnit.Framework.Internal.AsyncToSyncAdapter.Await(Func`1 invoke)&#xD;
+   at NUnit.Framework.Internal.Commands.TestMethodCommand.RunTestMethod(TestExecutionContext context)&#xD;
+   at NUnit.Framework.Internal.Commands.TestMethodCommand.Execute(TestExecutionContext context)&#xD;
+   at NUnit.Framework.Internal.Commands.BeforeAndAfterTestCommand.&lt;&gt;c__DisplayClass1_0.&lt;Execute&gt;b__0()&#xD;
+   at NUnit.Framework.Internal.Commands.DelegatingTestCommand.RunTestMethodInThreadAbortSafeZone(TestExecutionContext context, Action action)
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="a8c2432d-f366-47c8-9c23-55329f4866a9" testId="086babc3-6153-8c34-d962-83d729424747" testName="FailedLoginWithInvalidCredentials" computerName="MANISH" duration="00:00:13.7440040" startTime="2025-09-29T14:15:05.2316884+02:00" endTime="2025-09-29T14:15:18.9756925+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a8c2432d-f366-47c8-9c23-55329f4866a9">
+      <Output>
+        <StdOut>Given I navigate to the login page&#xD;
+-&gt; done: LoginStepDefinitions.GivenINavigateToLoginPage() (1.3s)&#xD;
+When I log in with username "invalidUserName" and password "invalidPwd"&#xD;
+-&gt; done: LoginStepDefinitions.WhenILogInWithCredentials("invalidUserName", "invalidPwd") (1.6s)&#xD;
+Then I should be able to view a login error message "The username and password could not be verified."&#xD;
+-&gt; error: Locator expected to contain text 'The username and password could not be verified.'&#xD;
+But was: '&#xD;
+			An internal error has occurred and has been logged.&#xD;
+		' &#xD;
+Call log:&#xD;
+  - Expect "ToContainTextAsync" with timeout 5000ms&#xD;
+  - waiting for Locator("#rightPanel .error")&#xD;
+    9 × locator resolved to &lt;p class="error"&gt;↵⇆⇆⇆An internal error has occurred and has been l…&lt;/p&gt;&#xD;
+      - unexpected value "&#xD;
+			An internal error has occurred and has been logged.&#xD;
+		" (5.0s)&#xD;
+Error message not found before screenshot: Timeout 3000ms exceeded.&#xD;
+Call log:&#xD;
+  - waiting for Locator("#rightPanel .error") to be visible&#xD;
+    11 × locator resolved to hidden &lt;p class="error"&gt;↵⇆⇆⇆An internal error has occurred and has been l…&lt;/p&gt;</StdOut>
+        <ErrorInfo>
+          <Message>Microsoft.Playwright.PlaywrightException : Locator expected to contain text 'The username and password could not be verified.'&#xD;
+But was: '&#xD;
+			An internal error has occurred and has been logged.&#xD;
+		' &#xD;
+Call log:&#xD;
+  - Expect "ToContainTextAsync" with timeout 5000ms&#xD;
+  - waiting for Locator("#rightPanel .error")&#xD;
+    9 × locator resolved to &lt;p class="error"&gt;↵⇆⇆⇆An internal error has occurred and has been l…&lt;/p&gt;&#xD;
+      - unexpected value "&#xD;
+			An internal error has occurred and has been logged.&#xD;
+		"</Message>
+          <StackTrace>   at Microsoft.Playwright.Core.AssertionsBase.ExpectImplAsync(String expression, FrameExpectOptions expectOptions, Object expected, String message, String title) in /_/src/Playwright/Core/AssertionsBase.cs:line 88&#xD;
+   at Microsoft.Playwright.Core.AssertionsBase.ExpectImplAsync(String expression, ExpectedTextValue[] expectedText, Object expected, String message, String title, FrameExpectOptions options) in /_/src/Playwright/Core/AssertionsBase.cs:line 66&#xD;
+   at Microsoft.Playwright.Core.AssertionsBase.ExpectImplAsync(String expression, ExpectedTextValue textValue, Object expected, String message, String title, FrameExpectOptions options) in /_/src/Playwright/Core/AssertionsBase.cs:line 58&#xD;
+   at LoginStepDefinitions.ThenSeeError(String expected) in C:\Users\ManishPatil\Pictures\PlaywrightC#\PlaywrightBDDAutomation-latest\ParabankBDDAutomation\src\StepDefinitions\LoginStepDefinitions.cs:line 58&#xD;
+   at Reqnroll.Bindings.AsyncMethodHelper.ConvertTaskOfT(Task task, Boolean getValue)&#xD;
+   at Reqnroll.Bindings.BindingDelegateInvoker.InvokeDelegateAsync(Delegate bindingDelegate, Object[] invokeArgs, ExecutionContextHolder executionContext)&#xD;
+   at Reqnroll.Bindings.BindingInvoker.InvokeBindingAsync(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, DurationHolder durationHolder)&#xD;
+   at Reqnroll.Infrastructure.TestExecutionEngine.ExecuteStepMatchAsync(BindingMatch match, Object[] arguments, DurationHolder durationHolder)&#xD;
+   at Reqnroll.Infrastructure.TestExecutionEngine.ExecuteStepAsync(IContextManager contextManager, StepInstance stepInstance)&#xD;
+   at Reqnroll.Infrastructure.TestExecutionEngine.OnAfterLastStepAsync()&#xD;
+   at Reqnroll.TestRunner.CollectScenarioErrorsAsync()&#xD;
+   at PlaywrightBDDAutomation.Features.LoginFeature.ScenarioCleanupAsync()&#xD;
+   at PlaywrightBDDAutomation.Features.LoginFeature.FailedLoginWithInvalidCredentials() in C:\Users\ManishPatil\Pictures\PlaywrightC#\PlaywrightBDDAutomation-latest\ParabankBDDAutomation\Features\Login.feature:line 14&#xD;
+   at NUnit.Framework.Internal.TaskAwaitAdapter.GenericAdapter`1.BlockUntilCompleted()&#xD;
+   at NUnit.Framework.Internal.MessagePumpStrategy.NoMessagePumpStrategy.WaitForCompletion(AwaitAdapter awaiter)&#xD;
+   at NUnit.Framework.Internal.AsyncToSyncAdapter.Await(Func`1 invoke)&#xD;
+   at NUnit.Framework.Internal.Commands.TestMethodCommand.RunTestMethod(TestExecutionContext context)&#xD;
+   at NUnit.Framework.Internal.Commands.TestMethodCommand.Execute(TestExecutionContext context)&#xD;
+   at NUnit.Framework.Internal.Commands.BeforeAndAfterTestCommand.&lt;&gt;c__DisplayClass1_0.&lt;Execute&gt;b__0()&#xD;
+   at NUnit.Framework.Internal.Commands.DelegatingTestCommand.RunTestMethodInThreadAbortSafeZone(TestExecutionContext context, Action action)
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="b6683dbf-e51a-40a6-bc5e-84d74880dec0" testId="badcec90-f8b8-c3ec-d08d-4c4f87def5d0" testName="PayABillToARegisteredPayee" computerName="MANISH" duration="00:00:14.2062630" startTime="2025-09-29T14:14:50.9999662+02:00" endTime="2025-09-29T14:15:05.2062285+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b6683dbf-e51a-40a6-bc5e-84d74880dec0">
+      <Output>
+        <StdOut>Given Logged in successfully with valid credentials&#xD;
+-&gt; done: LoginStepDefinitions.ValidCredentialsLogin() (3.0s)&#xD;
+Given I navigate to the Bill Pay page&#xD;
+-&gt; done: BillPaySteps.GivenOnBillPay() (0.3s)&#xD;
+And I fill payee details:&#xD;
+  --- table step argument ---&#xD;
+  | Name        | Address   | City   | State | Zip   | Phone      | Account |&#xD;
+  | ACME Energy | 1 Main St | Denver | CO    | 80202 | 3035551212 | 13566   |&#xD;
+-&gt; done: BillPaySteps.GivenFillPayee(&lt;table&gt;) (0.2s)&#xD;
+When I pay an amount of 75.25 from account "13455"&#xD;
+-&gt; done: BillPaySteps.WhenPay("75.25", "13455") (0.2s)&#xD;
+Then I should be able to view a confirmation "Bill Payment Complete"&#xD;
+-&gt; done: BillPaySteps.ThenSeeConfirmation("Bill Payment Comp...") (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="b034f8fa-1376-4b2e-ba40-271441e36754" testId="2cfd4bda-3d3e-4878-c687-690d5fb19e47" testName="SuccessfulLoginWithValidCredentials" computerName="MANISH" duration="00:00:07.1267810" startTime="2025-09-29T14:15:18.9760265+02:00" endTime="2025-09-29T14:15:26.1028073+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b034f8fa-1376-4b2e-ba40-271441e36754">
+      <Output>
+        <StdOut>Given I navigate to the login page&#xD;
+-&gt; done: LoginStepDefinitions.GivenINavigateToLoginPage() (1.3s)&#xD;
+When Logged in successfully with valid credentials&#xD;
+-&gt; done: LoginStepDefinitions.ValidCredentialsLogin() (2.2s)&#xD;
+Then I should be able to view the accounts overview&#xD;
+-&gt; done: LoginStepDefinitions.ThenIShouldBeRedirectedToAccountsOverview() (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="46161994-88b3-4765-9fa9-4f4c919c604b" testId="7d6aaff9-512d-95da-780e-a6e70e29bb9b" testName="ViewRecentTransactionsForCheckingAccount" computerName="MANISH" duration="00:01:06.5819999" startTime="2025-09-29T14:13:44.4104862+02:00" endTime="2025-09-29T14:14:50.9923533+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="46161994-88b3-4765-9fa9-4f4c919c604b">
+      <Output>
+        <StdOut>Given Logged in successfully with valid credentials&#xD;
+-&gt; done: LoginStepDefinitions.ValidCredentialsLogin() (41.4s)&#xD;
+When I open account "13455" from accounts overview&#xD;
+-&gt; done: AccountOverviewStepDefinitions.GivenIOpenAccountFromOverview("13455") (1.8s)&#xD;
+Then I should be able to see transactions listed&#xD;
+-&gt; done: AccountOverviewStepDefinitions.ThenIShouldSeeTransactions() (0.1s)</StdOut>
+      </Output>
+    </UnitTestResult>
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="PayABillToARegisteredPayee" storage="c:\users\manishpatil\pictures\playwrightc#\playwrightbddautomation-latest\parabankbddautomation\bin\debug\net8.0\playwrightbddautomation.dll" id="badcec90-f8b8-c3ec-d08d-4c4f87def5d0">
+      <Execution id="b6683dbf-e51a-40a6-bc5e-84d74880dec0" />
+      <TestMethod codeBase="C:\Users\ManishPatil\Pictures\PlaywrightC#\PlaywrightBDDAutomation-latest\ParabankBDDAutomation\bin\Debug\net8.0\PlaywrightBDDAutomation.dll" adapterTypeName="executor://nunit3testexecutor/" className="PlaywrightBDDAutomation.Features.BillPayFeature" name="PayABillToARegisteredPayee" />
+    </UnitTest>
+    <UnitTest name="SuccessfulLoginWithValidCredentials" storage="c:\users\manishpatil\pictures\playwrightc#\playwrightbddautomation-latest\parabankbddautomation\bin\debug\net8.0\playwrightbddautomation.dll" id="2cfd4bda-3d3e-4878-c687-690d5fb19e47">
+      <Execution id="b034f8fa-1376-4b2e-ba40-271441e36754" />
+      <TestMethod codeBase="C:\Users\ManishPatil\Pictures\PlaywrightC#\PlaywrightBDDAutomation-latest\ParabankBDDAutomation\bin\Debug\net8.0\PlaywrightBDDAutomation.dll" adapterTypeName="executor://nunit3testexecutor/" className="PlaywrightBDDAutomation.Features.LoginFeature" name="SuccessfulLoginWithValidCredentials" />
+    </UnitTest>
+    <UnitTest name="TransferFundsBetweenCheckingAndSavings" storage="c:\users\manishpatil\pictures\playwrightc#\playwrightbddautomation-latest\parabankbddautomation\bin\debug\net8.0\playwrightbddautomation.dll" id="e1c1ac66-2baf-bbf0-94fe-fac1503e4dcc">
+      <Execution id="990c8da0-9092-4e8d-9b96-f0f917a3e740" />
+      <TestMethod codeBase="C:\Users\ManishPatil\Pictures\PlaywrightC#\PlaywrightBDDAutomation-latest\ParabankBDDAutomation\bin\Debug\net8.0\PlaywrightBDDAutomation.dll" adapterTypeName="executor://nunit3testexecutor/" className="PlaywrightBDDAutomation.Features.TransferFundsFeature" name="TransferFundsBetweenCheckingAndSavings" />
+    </UnitTest>
+    <UnitTest name="FailedLoginWithInvalidCredentials" storage="c:\users\manishpatil\pictures\playwrightc#\playwrightbddautomation-latest\parabankbddautomation\bin\debug\net8.0\playwrightbddautomation.dll" id="086babc3-6153-8c34-d962-83d729424747">
+      <Execution id="a8c2432d-f366-47c8-9c23-55329f4866a9" />
+      <TestMethod codeBase="C:\Users\ManishPatil\Pictures\PlaywrightC#\PlaywrightBDDAutomation-latest\ParabankBDDAutomation\bin\Debug\net8.0\PlaywrightBDDAutomation.dll" adapterTypeName="executor://nunit3testexecutor/" className="PlaywrightBDDAutomation.Features.LoginFeature" name="FailedLoginWithInvalidCredentials" />
+    </UnitTest>
+    <UnitTest name="ViewRecentTransactionsForCheckingAccount" storage="c:\users\manishpatil\pictures\playwrightc#\playwrightbddautomation-latest\parabankbddautomation\bin\debug\net8.0\playwrightbddautomation.dll" id="7d6aaff9-512d-95da-780e-a6e70e29bb9b">
+      <Execution id="46161994-88b3-4765-9fa9-4f4c919c604b" />
+      <TestMethod codeBase="C:\Users\ManishPatil\Pictures\PlaywrightC#\PlaywrightBDDAutomation-latest\ParabankBDDAutomation\bin\Debug\net8.0\PlaywrightBDDAutomation.dll" adapterTypeName="executor://nunit3testexecutor/" className="PlaywrightBDDAutomation.Features.AccountsOverviewFeature" name="ViewRecentTransactionsForCheckingAccount" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="e1c1ac66-2baf-bbf0-94fe-fac1503e4dcc" executionId="990c8da0-9092-4e8d-9b96-f0f917a3e740" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="086babc3-6153-8c34-d962-83d729424747" executionId="a8c2432d-f366-47c8-9c23-55329f4866a9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="badcec90-f8b8-c3ec-d08d-4c4f87def5d0" executionId="b6683dbf-e51a-40a6-bc5e-84d74880dec0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2cfd4bda-3d3e-4878-c687-690d5fb19e47" executionId="b034f8fa-1376-4b2e-ba40-271441e36754" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7d6aaff9-512d-95da-780e-a6e70e29bb9b" executionId="46161994-88b3-4765-9fa9-4f4c919c604b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Failed">
+    <Counters total="5" executed="5" passed="3" failed="2" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>NUnit Adapter 4.5.0.0: Test execution started&#xD;
+Running all tests in C:\Users\ManishPatil\Pictures\PlaywrightC#\PlaywrightBDDAutomation-latest\ParabankBDDAutomation\bin\Debug\net8.0\PlaywrightBDDAutomation.dll&#xD;
+   NUnit3TestExecutor discovered 5 of 5 NUnit test cases using Current Discovery mode, Non-Explicit run&#xD;
+NUnit Adapter 4.5.0.0: Test execution complete&#xD;
+</StdOut>
+    </Output>
+    <RunInfos>
+      <RunInfo computerName="MANISH" outcome="Warning" timestamp="2025-09-29T14:14:51.0784758+02:00">
+        <Text>Given Logged in successfully with valid credentials&#xD;
+-&gt; done: LoginStepDefinitions.ValidCredentialsLogin() (41.4s)&#xD;
+When I open account "13455" from accounts overview&#xD;
+-&gt; done: AccountOverviewStepDefinitions.GivenIOpenAccountFromOverview("13455") (1.8s)&#xD;
+Then I should be able to see transactions listed&#xD;
+-&gt; done: AccountOverviewStepDefinitions.ThenIShouldSeeTransactions() (0.1s)&#xD;
+</Text>
+      </RunInfo>
+      <RunInfo computerName="MANISH" outcome="Warning" timestamp="2025-09-29T14:15:05.2075461+02:00">
+        <Text>Given Logged in successfully with valid credentials&#xD;
+-&gt; done: LoginStepDefinitions.ValidCredentialsLogin() (3.0s)&#xD;
+Given I navigate to the Bill Pay page&#xD;
+-&gt; done: BillPaySteps.GivenOnBillPay() (0.3s)&#xD;
+And I fill payee details:&#xD;
+  --- table step argument ---&#xD;
+  | Name        | Address   | City   | State | Zip   | Phone      | Account |&#xD;
+  | ACME Energy | 1 Main St | Denver | CO    | 80202 | 3035551212 | 13566   |&#xD;
+-&gt; done: BillPaySteps.GivenFillPayee(&lt;table&gt;) (0.2s)&#xD;
+When I pay an amount of 75.25 from account "13455"&#xD;
+-&gt; done: BillPaySteps.WhenPay("75.25", "13455") (0.2s)&#xD;
+Then I should be able to view a confirmation "Bill Payment Complete"&#xD;
+-&gt; done: BillPaySteps.ThenSeeConfirmation("Bill Payment Comp...") (0.0s)&#xD;
+</Text>
+      </RunInfo>
+      <RunInfo computerName="MANISH" outcome="Warning" timestamp="2025-09-29T14:15:19.0045116+02:00">
+        <Text>Given I navigate to the login page&#xD;
+-&gt; done: LoginStepDefinitions.GivenINavigateToLoginPage() (1.3s)&#xD;
+When I log in with username "invalidUserName" and password "invalidPwd"&#xD;
+-&gt; done: LoginStepDefinitions.WhenILogInWithCredentials("invalidUserName", "invalidPwd") (1.6s)&#xD;
+Then I should be able to view a login error message "The username and password could not be verified."&#xD;
+-&gt; error: Locator expected to contain text 'The username and password could not be verified.'&#xD;
+But was: '&#xD;
+			An internal error has occurred and has been logged.&#xD;
+		' &#xD;
+Call log:&#xD;
+  - Expect "ToContainTextAsync" with timeout 5000ms&#xD;
+  - waiting for Locator("#rightPanel .error")&#xD;
+    9 × locator resolved to &lt;p class="error"&gt;↵⇆⇆⇆An internal error has occurred and has been l…&lt;/p&gt;&#xD;
+      - unexpected value "&#xD;
+			An internal error has occurred and has been logged.&#xD;
+		" (5.0s)&#xD;
+Error message not found before screenshot: Timeout 3000ms exceeded.&#xD;
+Call log:&#xD;
+  - waiting for Locator("#rightPanel .error") to be visible&#xD;
+    11 × locator resolved to hidden &lt;p class="error"&gt;↵⇆⇆⇆An internal error has occurred and has been l…&lt;/p&gt;&#xD;
+</Text>
+      </RunInfo>
+      <RunInfo computerName="MANISH" outcome="Warning" timestamp="2025-09-29T14:15:26.1544498+02:00">
+        <Text>Given I navigate to the login page&#xD;
+-&gt; done: LoginStepDefinitions.GivenINavigateToLoginPage() (1.3s)&#xD;
+When Logged in successfully with valid credentials&#xD;
+-&gt; done: LoginStepDefinitions.ValidCredentialsLogin() (2.2s)&#xD;
+Then I should be able to view the accounts overview&#xD;
+-&gt; done: LoginStepDefinitions.ThenIShouldBeRedirectedToAccountsOverview() (0.0s)&#xD;
+</Text>
+      </RunInfo>
+      <RunInfo computerName="MANISH" outcome="Warning" timestamp="2025-09-29T14:16:06.3079532+02:00">
+        <Text>Given Logged in successfully with valid credentials&#xD;
+-&gt; done: LoginStepDefinitions.ValidCredentialsLogin() (3.1s)&#xD;
+Given I navigate to the transfer funds page&#xD;
+-&gt; done: TransferFundsSteps.GivenOnTransferPage() (0.2s)&#xD;
+When I transfer 50.00 from account "13455" to account "13566"&#xD;
+-&gt; error: Timeout 30000ms exceeded.&#xD;
+Call log:&#xD;
+  - waiting for Locator("select[id='toAccountId']")&#xD;
+    - locator resolved to &lt;select class="input" id="toAccountId"&gt;…&lt;/select&gt;&#xD;
+  - attempting select option action&#xD;
+    2 × waiting for element to be visible and enabled&#xD;
+      - did not find some options&#xD;
+    - retrying select option action&#xD;
+    - waiting 20ms&#xD;
+    2 × waiting for element to be visible and enabled&#xD;
+      - did not find some options&#xD;
+    - retrying select option action&#xD;
+      - waiting 100ms&#xD;
+    52 × waiting for element to be visible and enabled&#xD;
+       - did not find some options&#xD;
+     - retrying select option action&#xD;
+       - waiting 500ms (30.3s)&#xD;
+Error message not found before screenshot: Timeout 3000ms exceeded.&#xD;
+Call log:&#xD;
+  - waiting for Locator("#rightPanel .error") to be visible&#xD;
+    11 × locator resolved to 3 elements. Proceeding with the first one: &lt;p class="error" id="amount.errors"&gt;↵⇆⇆⇆The amount cannot be empty. ↵⇆⇆&lt;/p&gt;&#xD;
+Then I should be able to view a confirmation message "Transfer Complete!"&#xD;
+-&gt; skipped because of previous errors&#xD;
+</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+</TestRun>

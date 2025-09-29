@@ -1,0 +1,8 @@
+{
+  "language": {
+    "feature": "en-us"
+  },
+  "runtime": {
+    "stopAtFirstError": false
+  }
+}

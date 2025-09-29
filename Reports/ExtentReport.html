@@ -1,0 +1,1172 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ <title>ParaBank Automation Report</title>
+ <link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@c439bdbc7bade3d85af3b90e9e69c30ebc87445f/commons/img/logo.png">
+ <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@c439bdbc7bade3d85af3b90e9e69c30ebc87445f/commons/img/logo.png">
+ <link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@78fa5a2421587b8228150e93142e5ba97178e85b/spark/css/spark-style.css" rel="stylesheet" />
+ <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+ <script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@78fa5a2421587b8228150e93142e5ba97178e85b/spark/js/jsontree.js"></script>
+ <style></style>
+</head>
+<body class="spa  standard">
+ <div class="app">
+  <div class="layout">
+   <div class="header navbar">
+ <div class="vheader">
+  <div class="nav-logo">
+   <a href="#">
+	 <div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@c43b89d03a7c43dae8bb8f0f078bad1997af6b3b/commons/img/logo.png')"></div>
+   </a>
+  </div>
+  <ul class="nav-left">
+   <li class="search-box">
+	<a class="search-toggle" href="#"><i class="search-icon fa fa-search"></i><i class="search-icon-close fa fa-close"></i></a>
+   </li>
+   <li class="search-input">
+    <input id="search-tests" class="form-control" type="text" placeholder="Search...">
+   </li>
+  </ul>
+  <ul class="nav-right">
+   <li class="m-r-10"><a href="#"><span class="badge badge-primary">BDD Execution</span></a></li>
+   <li class="m-r-10">
+    <a href="#"><span class="badge badge-primary">29-09-2025 14:13:44</span></a>
+   </li>
+  </ul>
+ </div>
+</div>
+   <div class="side-nav">
+ <div class="side-nav-inner">
+  <ul class="side-nav-menu">
+   <li class="nav-item dropdown" onclick="toggleView('test-view')">
+    <a id="nav-test" class="dropdown-toggle" href="#">
+     <span class="ico"><i class="fa fa-list"></i></span>
+    </a>
+   </li>
+   <li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+    <a id="nav-dashboard" class="dropdown-toggle" href="#">
+     <span class="ico"><i class="fa fa-bar-chart"></i></span>
+    </a>
+   </li>
+  </ul>
+ </div>
+</div>
+
+   <div class="vcontainer">
+    <div class="main-content">
+     
+
+<div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+      <ul class="tools pull-left">
+        <li><a href="#"><span class="font-size-14">Tests</span></a></li>
+      </ul>
+      <ul class="tools text-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+          <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+ <a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>  <a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>             <div class="dropdown-divider"></div>
+            <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item" status="pass" test-id="1"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Accounts Overview</p>
+            <p class="text-sm">
+              <span>14:13:44</span> / <span>64483.88 ms</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+            <div class="detail-head">
+              <div class="p-v-10">
+                <div class="info">
+                  <h5 class="test-status text-pass">Accounts Overview</h5>
+                  <span class='badge badge-success'>29-09-2025 14:13:44</span>
+                  <span class='badge badge-danger'>29-09-2025 14:14:48</span>
+                  <span class='badge badge-default'>64483.88 ms</span>
+                  &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+                  <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+                  <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+                  <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+                </div>
+              </div>
+            </div>
+
+
+  <div class="mt-4">
+  <div class="accordion">
+      <div class="card">
+        <div class="card-header">
+            <div class="card-toolbar node-info">
+            <ul class="list-inline d-none d-sm-block">
+              <li><span class="badge pass-bg log ">Pass</span></li>
+              <li title="Time taken"><span class='badge badge-default'>64459.53</span></li>
+            </ul>
+          </div>
+          <div class="card-title">
+            <div class="node" id="2">View recent transactions for checking account</div>
+              <div class="status-avatar float-right"><i class="fa fa-paperclip"></i></div>
+          </div>
+        </div>
+
+  <div class="accordion">
+      <div class="card">
+        <div class="card-header">
+            <div class="card-toolbar node-info">
+            <ul class="list-inline d-none d-sm-block">
+              <li><span class="badge pass-bg log ">Pass</span></li>
+              <li title="Time taken"><span class='badge badge-default'>1.06</span></li>
+            </ul>
+          </div>
+          <div class="card-title">
+            <div class="node" id="3">Given</div>
+              <div class="desc">Logged in successfully with valid credentials</div>
+              <div class="status-avatar float-right"><i class="fa fa-paperclip"></i></div>
+          </div>
+        </div>
+        <div class="collapse">
+          <div class="card-body">
+            <div class="detail-body mt-4">
+
+
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>Sep 29, 2025 14:14:46</td>
+        <td>
+Step passed        </td>
+      </tr>
+  </tbody>
+</table>            </div>
+
+  <div class="row mb-3">
+   <div class="col-md-3">
+     <img data-featherlight='Screenshots\View recent transactions for checking account_Logged in successfully with valid credentials_20250929_141445.png' src="Screenshots\View recent transactions for checking account_Logged in successfully with valid credentials_20250929_141445.png">
+  </div>
+ </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+            <div class="card-toolbar node-info">
+            <ul class="list-inline d-none d-sm-block">
+              <li><span class="badge pass-bg log ">Pass</span></li>
+              <li title="Time taken"><span class='badge badge-default'>0.03</span></li>
+            </ul>
+          </div>
+          <div class="card-title">
+            <div class="node" id="4">When</div>
+              <div class="desc">I open account "13455" from accounts overview</div>
+              <div class="status-avatar float-right"><i class="fa fa-paperclip"></i></div>
+          </div>
+        </div>
+        <div class="collapse">
+          <div class="card-body">
+            <div class="detail-body mt-4">
+
+
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>Sep 29, 2025 14:14:48</td>
+        <td>
+Step passed        </td>
+      </tr>
+  </tbody>
+</table>            </div>
+
+  <div class="row mb-3">
+   <div class="col-md-3">
+     <img data-featherlight='Screenshots\View recent transactions for checking account_I open account _13455_ from accounts overview_20250929_141448.png' src="Screenshots\View recent transactions for checking account_I open account _13455_ from accounts overview_20250929_141448.png">
+  </div>
+ </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+            <div class="card-toolbar node-info">
+            <ul class="list-inline d-none d-sm-block">
+              <li><span class="badge pass-bg log ">Pass</span></li>
+              <li title="Time taken"><span class='badge badge-default'>0.03</span></li>
+            </ul>
+          </div>
+          <div class="card-title">
+            <div class="node" id="5">Then</div>
+              <div class="desc">I should be able to see transactions listed</div>
+              <div class="status-avatar float-right"><i class="fa fa-paperclip"></i></div>
+          </div>
+        </div>
+        <div class="collapse">
+          <div class="card-body">
+            <div class="detail-body mt-4">
+
+
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>Sep 29, 2025 14:14:48</td>
+        <td>
+Step passed        </td>
+      </tr>
+  </tbody>
+</table>            </div>
+
+  <div class="row mb-3">
+   <div class="col-md-3">
+     <img data-featherlight='Screenshots\View recent transactions for checking account_I should be able to see transactions listed_20250929_141448.png' src="Screenshots\View recent transactions for checking account_I should be able to see transactions listed_20250929_141448.png">
+  </div>
+ </div>
+          </div>
+        </div>
+      </div>
+  </div>
+      </div>
+  </div>
+</div> 
+          </div>
+        </li>
+        <li class="test-item" status="pass" test-id="6"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Bill Pay</p>
+            <p class="text-sm">
+              <span>14:14:51</span> / <span>13977.84 ms</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+            <div class="detail-head">
+              <div class="p-v-10">
+                <div class="info">
+                  <h5 class="test-status text-pass">Bill Pay</h5>
+                  <span class='badge badge-success'>29-09-2025 14:14:51</span>
+                  <span class='badge badge-danger'>29-09-2025 14:15:05</span>
+                  <span class='badge badge-default'>13977.84 ms</span>
+                  &middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
+                  <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+                  <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+                  <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+                </div>
+              </div>
+            </div>
+
+
+  <div class="mt-4">
+  <div class="accordion">
+      <div class="card">
+        <div class="card-header">
+            <div class="card-toolbar node-info">
+            <ul class="list-inline d-none d-sm-block">
+              <li><span class="badge pass-bg log ">Pass</span></li>
+              <li title="Time taken"><span class='badge badge-default'>13975.48</span></li>
+            </ul>
+          </div>
+          <div class="card-title">
+            <div class="node" id="7">Pay a bill to a registered payee</div>
+              <div class="status-avatar float-right"><i class="fa fa-paperclip"></i></div>
+          </div>
+        </div>
+
+  <div class="accordion">
+      <div class="card">
+        <div class="card-header">
+            <div class="card-toolbar node-info">
+            <ul class="list-inline d-none d-sm-block">
+              <li><span class="badge pass-bg log ">Pass</span></li>
+              <li title="Time taken"><span class='badge badge-default'>0.03</span></li>
+            </ul>
+          </div>
+          <div class="card-title">
+            <div class="node" id="8">Given</div>
+              <div class="desc">Logged in successfully with valid credentials</div>
+              <div class="status-avatar float-right"><i class="fa fa-paperclip"></i></div>
+          </div>
+        </div>
+        <div class="collapse">
+          <div class="card-body">
+            <div class="detail-body mt-4">
+
+
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>Sep 29, 2025 14:15:03</td>
+        <td>
+Step passed        </td>
+      </tr>
+  </tbody>
+</table>            </div>
+
+  <div class="row mb-3">
+   <div class="col-md-3">
+     <img data-featherlight='Screenshots\Pay a bill to a registered payee_Logged in successfully with valid credentials_20250929_141503.png' src="Screenshots\Pay a bill to a registered payee_Logged in successfully with valid credentials_20250929_141503.png">
+  </div>
+ </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+            <div class="card-toolbar node-info">
+            <ul class="list-inline d-none d-sm-block">
+              <li><span class="badge pass-bg log ">Pass</span></li>
+              <li title="Time taken"><span class='badge badge-default'>0.04</span></li>
+            </ul>
+          </div>
+          <div class="card-title">
+            <div class="node" id="9">Given</div>
+              <div class="desc">I navigate to the Bill Pay page</div>
+              <div class="status-avatar float-right"><i class="fa fa-paperclip"></i></div>
+          </div>
+        </div>
+        <div class="collapse">
+          <div class="card-body">
+            <div class="detail-body mt-4">
+
+
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>Sep 29, 2025 14:15:04</td>
+        <td>
+Step passed        </td>
+      </tr>
+  </tbody>
+</table>            </div>
+
+  <div class="row mb-3">
+   <div class="col-md-3">
+     <img data-featherlight='Screenshots\Pay a bill to a registered payee_I navigate to the Bill Pay page_20250929_141503.png' src="Screenshots\Pay a bill to a registered payee_I navigate to the Bill Pay page_20250929_141503.png">
+  </div>
+ </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+            <div class="card-toolbar node-info">
+            <ul class="list-inline d-none d-sm-block">
+              <li><span class="badge pass-bg log ">Pass</span></li>
+              <li title="Time taken"><span class='badge badge-default'>0.03</span></li>
+            </ul>
+          </div>
+          <div class="card-title">
+            <div class="node" id="10">Given</div>
+              <div class="desc">I fill payee details:</div>
+              <div class="status-avatar float-right"><i class="fa fa-paperclip"></i></div>
+          </div>
+        </div>
+        <div class="collapse">
+          <div class="card-body">
+            <div class="detail-body mt-4">
+
+
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>Sep 29, 2025 14:15:04</td>
+        <td>
+Step passed        </td>
+      </tr>
+  </tbody>
+</table>            </div>
+
+  <div class="row mb-3">
+   <div class="col-md-3">
+     <img data-featherlight='Screenshots\Pay a bill to a registered payee_I fill payee details__20250929_141504.png' src="Screenshots\Pay a bill to a registered payee_I fill payee details__20250929_141504.png">
+  </div>
+ </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+            <div class="card-toolbar node-info">
+            <ul class="list-inline d-none d-sm-block">
+              <li><span class="badge pass-bg log ">Pass</span></li>
+              <li title="Time taken"><span class='badge badge-default'>0.04</span></li>
+            </ul>
+          </div>
+          <div class="card-title">
+            <div class="node" id="11">When</div>
+              <div class="desc">I pay an amount of 75.25 from account "13455"</div>
+              <div class="status-avatar float-right"><i class="fa fa-paperclip"></i></div>
+          </div>
+        </div>
+        <div class="collapse">
+          <div class="card-body">
+            <div class="detail-body mt-4">
+
+
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>Sep 29, 2025 14:15:04</td>
+        <td>
+Step passed        </td>
+      </tr>
+  </tbody>
+</table>            </div>
+
+  <div class="row mb-3">
+   <div class="col-md-3">
+     <img data-featherlight='Screenshots\Pay a bill to a registered payee_I pay an amount of 75.25 from account _13455__20250929_141504.png' src="Screenshots\Pay a bill to a registered payee_I pay an amount of 75.25 from account _13455__20250929_141504.png">
+  </div>
+ </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+            <div class="card-toolbar node-info">
+            <ul class="list-inline d-none d-sm-block">
+              <li><span class="badge pass-bg log ">Pass</span></li>
+              <li title="Time taken"><span class='badge badge-default'>0.04</span></li>
+            </ul>
+          </div>
+          <div class="card-title">
+            <div class="node" id="12">Then</div>
+              <div class="desc">I should be able to view a confirmation "Bill Payment Complete"</div>
+              <div class="status-avatar float-right"><i class="fa fa-paperclip"></i></div>
+          </div>
+        </div>
+        <div class="collapse">
+          <div class="card-body">
+            <div class="detail-body mt-4">
+
+
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>Sep 29, 2025 14:15:05</td>
+        <td>
+Step passed        </td>
+      </tr>
+  </tbody>
+</table>            </div>
+
+  <div class="row mb-3">
+   <div class="col-md-3">
+     <img data-featherlight='Screenshots\Pay a bill to a registered payee_I should be able to view a confirmation _Bill Payment Complete__20250929_141504.png' src="Screenshots\Pay a bill to a registered payee_I should be able to view a confirmation _Bill Payment Complete__20250929_141504.png">
+  </div>
+ </div>
+          </div>
+        </div>
+      </div>
+  </div>
+      </div>
+  </div>
+</div> 
+          </div>
+        </li>
+        <li class="test-item" status="fail" test-id="13"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Login</p>
+            <p class="text-sm">
+              <span>14:15:05</span> / <span>20728.35 ms</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+            <div class="detail-head">
+              <div class="p-v-10">
+                <div class="info">
+                  <h5 class="test-status text-fail">Login</h5>
+                  <span class='badge badge-success'>29-09-2025 14:15:05</span>
+                  <span class='badge badge-danger'>29-09-2025 14:15:25</span>
+                  <span class='badge badge-default'>20728.35 ms</span>
+                  &middot; <span class='uri-anchor badge badge-default'>#test-id=13</span>
+                  <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+                  <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+                  <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+                </div>
+              </div>
+            </div>
+
+
+  <div class="mt-4">
+  <div class="accordion">
+      <div class="card">
+        <div class="card-header">
+            <div class="card-toolbar node-info">
+            <ul class="list-inline d-none d-sm-block">
+              <li><span class="badge fail-bg log ">Fail</span></li>
+              <li title="Time taken"><span class='badge badge-default'>13561.29</span></li>
+            </ul>
+          </div>
+          <div class="card-title">
+            <div class="node" id="14">Failed login with invalid credentials</div>
+              <div class="status-avatar float-right"><i class="fa fa-paperclip"></i></div>
+          </div>
+        </div>
+
+  <div class="accordion">
+      <div class="card">
+        <div class="card-header">
+            <div class="card-toolbar node-info">
+            <ul class="list-inline d-none d-sm-block">
+              <li><span class="badge pass-bg log ">Pass</span></li>
+              <li title="Time taken"><span class='badge badge-default'>0.04</span></li>
+            </ul>
+          </div>
+          <div class="card-title">
+            <div class="node" id="15">Given</div>
+              <div class="desc">I navigate to the login page</div>
+              <div class="status-avatar float-right"><i class="fa fa-paperclip"></i></div>
+          </div>
+        </div>
+        <div class="collapse">
+          <div class="card-body">
+            <div class="detail-body mt-4">
+
+
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>Sep 29, 2025 14:15:08</td>
+        <td>
+Step passed        </td>
+      </tr>
+  </tbody>
+</table>            </div>
+
+  <div class="row mb-3">
+   <div class="col-md-3">
+     <img data-featherlight='Screenshots\Failed login with invalid credentials_I navigate to the login page_20250929_141508.png' src="Screenshots\Failed login with invalid credentials_I navigate to the login page_20250929_141508.png">
+  </div>
+ </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+            <div class="card-toolbar node-info">
+            <ul class="list-inline d-none d-sm-block">
+              <li><span class="badge pass-bg log ">Pass</span></li>
+              <li title="Time taken"><span class='badge badge-default'>0.03</span></li>
+            </ul>
+          </div>
+          <div class="card-title">
+            <div class="node" id="16">When</div>
+              <div class="desc">I log in with username "invalidUserName" and password "invalidPwd"</div>
+              <div class="status-avatar float-right"><i class="fa fa-paperclip"></i></div>
+          </div>
+        </div>
+        <div class="collapse">
+          <div class="card-body">
+            <div class="detail-body mt-4">
+
+
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>Sep 29, 2025 14:15:10</td>
+        <td>
+Step passed        </td>
+      </tr>
+  </tbody>
+</table>            </div>
+
+  <div class="row mb-3">
+   <div class="col-md-3">
+     <img data-featherlight='Screenshots\Failed login with invalid credentials_I log in with username _invalidUserName_ and password _invalidPwd__20250929_141510.png' src="Screenshots\Failed login with invalid credentials_I log in with username _invalidUserName_ and password _invalidPwd__20250929_141510.png">
+  </div>
+ </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+            <div class="card-toolbar node-info">
+            <ul class="list-inline d-none d-sm-block">
+              <li><span class="badge fail-bg log ">Fail</span></li>
+              <li title="Time taken"><span class='badge badge-default'>0.35</span></li>
+            </ul>
+          </div>
+          <div class="card-title">
+            <div class="node" id="17">Then</div>
+              <div class="desc">I should be able to view a login error message "The username and password could not be verified."</div>
+              <div class="status-avatar float-right"><i class="fa fa-paperclip"></i></div>
+          </div>
+        </div>
+        <div class="">
+          <div class="card-body">
+            <div class="detail-body mt-4">
+
+
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>Sep 29, 2025 14:15:18</td>
+        <td>
+Locator expected to contain text 'The username and password could not be verified.'
+But was: '
+			An internal error has occurred and has been logged.
+		' 
+Call log:
+  - Expect "ToContainTextAsync" with timeout 5000ms
+  - waiting for Locator("#rightPanel .error")
+    9 × locator resolved to <p class="error">↵⇆⇆⇆An internal error has occurred and has been l…</p>
+      - unexpected value "
+			An internal error has occurred and has been logged.
+		"        </td>
+      </tr>
+  </tbody>
+</table>            </div>
+
+  <div class="row mb-3">
+   <div class="col-md-3">
+     <img data-featherlight='Screenshots\Failed login with invalid credentials_I should be able to view a login error message _The username and password could not be verified.__20250929_141515.png' src="Screenshots\Failed login with invalid credentials_I should be able to view a login error message _The username and password could not be verified.__20250929_141515.png">
+  </div>
+ </div>
+          </div>
+        </div>
+      </div>
+  </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+            <div class="card-toolbar node-info">
+            <ul class="list-inline d-none d-sm-block">
+              <li><span class="badge pass-bg log ">Pass</span></li>
+              <li title="Time taken"><span class='badge badge-default'>6980.86</span></li>
+            </ul>
+          </div>
+          <div class="card-title">
+            <div class="node" id="18">Successful login with valid credentials</div>
+              <div class="status-avatar float-right"><i class="fa fa-paperclip"></i></div>
+          </div>
+        </div>
+
+  <div class="accordion">
+      <div class="card">
+        <div class="card-header">
+            <div class="card-toolbar node-info">
+            <ul class="list-inline d-none d-sm-block">
+              <li><span class="badge pass-bg log ">Pass</span></li>
+              <li title="Time taken"><span class='badge badge-default'>0.04</span></li>
+            </ul>
+          </div>
+          <div class="card-title">
+            <div class="node" id="19">Given</div>
+              <div class="desc">I navigate to the login page</div>
+              <div class="status-avatar float-right"><i class="fa fa-paperclip"></i></div>
+          </div>
+        </div>
+        <div class="collapse">
+          <div class="card-body">
+            <div class="detail-body mt-4">
+
+
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>Sep 29, 2025 14:15:22</td>
+        <td>
+Step passed        </td>
+      </tr>
+  </tbody>
+</table>            </div>
+
+  <div class="row mb-3">
+   <div class="col-md-3">
+     <img data-featherlight='Screenshots\Successful login with valid credentials_I navigate to the login page_20250929_141522.png' src="Screenshots\Successful login with valid credentials_I navigate to the login page_20250929_141522.png">
+  </div>
+ </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+            <div class="card-toolbar node-info">
+            <ul class="list-inline d-none d-sm-block">
+              <li><span class="badge pass-bg log ">Pass</span></li>
+              <li title="Time taken"><span class='badge badge-default'>0.03</span></li>
+            </ul>
+          </div>
+          <div class="card-title">
+            <div class="node" id="20">When</div>
+              <div class="desc">Logged in successfully with valid credentials</div>
+              <div class="status-avatar float-right"><i class="fa fa-paperclip"></i></div>
+          </div>
+        </div>
+        <div class="collapse">
+          <div class="card-body">
+            <div class="detail-body mt-4">
+
+
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>Sep 29, 2025 14:15:25</td>
+        <td>
+Step passed        </td>
+      </tr>
+  </tbody>
+</table>            </div>
+
+  <div class="row mb-3">
+   <div class="col-md-3">
+     <img data-featherlight='Screenshots\Successful login with valid credentials_Logged in successfully with valid credentials_20250929_141524.png' src="Screenshots\Successful login with valid credentials_Logged in successfully with valid credentials_20250929_141524.png">
+  </div>
+ </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+            <div class="card-toolbar node-info">
+            <ul class="list-inline d-none d-sm-block">
+              <li><span class="badge pass-bg log ">Pass</span></li>
+              <li title="Time taken"><span class='badge badge-default'>0.04</span></li>
+            </ul>
+          </div>
+          <div class="card-title">
+            <div class="node" id="21">Then</div>
+              <div class="desc">I should be able to view the accounts overview</div>
+              <div class="status-avatar float-right"><i class="fa fa-paperclip"></i></div>
+          </div>
+        </div>
+        <div class="collapse">
+          <div class="card-body">
+            <div class="detail-body mt-4">
+
+
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>Sep 29, 2025 14:15:25</td>
+        <td>
+Step passed        </td>
+      </tr>
+  </tbody>
+</table>            </div>
+
+  <div class="row mb-3">
+   <div class="col-md-3">
+     <img data-featherlight='Screenshots\Successful login with valid credentials_I should be able to view the accounts overview_20250929_141525.png' src="Screenshots\Successful login with valid credentials_I should be able to view the accounts overview_20250929_141525.png">
+  </div>
+ </div>
+          </div>
+        </div>
+      </div>
+  </div>
+      </div>
+  </div>
+</div> 
+          </div>
+        </li>
+        <li class="test-item" status="fail" test-id="22"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Transfer Funds</p>
+            <p class="text-sm">
+              <span>14:15:26</span> / <span>39241.32 ms</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+            <div class="detail-head">
+              <div class="p-v-10">
+                <div class="info">
+                  <h5 class="test-status text-fail">Transfer Funds</h5>
+                  <span class='badge badge-success'>29-09-2025 14:15:26</span>
+                  <span class='badge badge-danger'>29-09-2025 14:16:05</span>
+                  <span class='badge badge-default'>39241.32 ms</span>
+                  &middot; <span class='uri-anchor badge badge-default'>#test-id=22</span>
+                  <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+                  <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+                  <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+                </div>
+              </div>
+            </div>
+
+
+  <div class="mt-4">
+  <div class="accordion">
+      <div class="card">
+        <div class="card-header">
+            <div class="card-toolbar node-info">
+            <ul class="list-inline d-none d-sm-block">
+              <li><span class="badge fail-bg log ">Fail</span></li>
+              <li title="Time taken"><span class='badge badge-default'>39239.41</span></li>
+            </ul>
+          </div>
+          <div class="card-title">
+            <div class="node" id="23">Transfer funds between checking and savings</div>
+              <div class="status-avatar float-right"><i class="fa fa-paperclip"></i></div>
+          </div>
+        </div>
+
+  <div class="accordion">
+      <div class="card">
+        <div class="card-header">
+            <div class="card-toolbar node-info">
+            <ul class="list-inline d-none d-sm-block">
+              <li><span class="badge pass-bg log ">Pass</span></li>
+              <li title="Time taken"><span class='badge badge-default'>0.05</span></li>
+            </ul>
+          </div>
+          <div class="card-title">
+            <div class="node" id="24">Given</div>
+              <div class="desc">Logged in successfully with valid credentials</div>
+              <div class="status-avatar float-right"><i class="fa fa-paperclip"></i></div>
+          </div>
+        </div>
+        <div class="collapse">
+          <div class="card-body">
+            <div class="detail-body mt-4">
+
+
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>Sep 29, 2025 14:15:31</td>
+        <td>
+Step passed        </td>
+      </tr>
+  </tbody>
+</table>            </div>
+
+  <div class="row mb-3">
+   <div class="col-md-3">
+     <img data-featherlight='Screenshots\Transfer funds between checking and savings_Logged in successfully with valid credentials_20250929_141531.png' src="Screenshots\Transfer funds between checking and savings_Logged in successfully with valid credentials_20250929_141531.png">
+  </div>
+ </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+            <div class="card-toolbar node-info">
+            <ul class="list-inline d-none d-sm-block">
+              <li><span class="badge pass-bg log ">Pass</span></li>
+              <li title="Time taken"><span class='badge badge-default'>0.03</span></li>
+            </ul>
+          </div>
+          <div class="card-title">
+            <div class="node" id="25">Given</div>
+              <div class="desc">I navigate to the transfer funds page</div>
+              <div class="status-avatar float-right"><i class="fa fa-paperclip"></i></div>
+          </div>
+        </div>
+        <div class="collapse">
+          <div class="card-body">
+            <div class="detail-body mt-4">
+
+
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>Sep 29, 2025 14:15:31</td>
+        <td>
+Step passed        </td>
+      </tr>
+  </tbody>
+</table>            </div>
+
+  <div class="row mb-3">
+   <div class="col-md-3">
+     <img data-featherlight='Screenshots\Transfer funds between checking and savings_I navigate to the transfer funds page_20250929_141531.png' src="Screenshots\Transfer funds between checking and savings_I navigate to the transfer funds page_20250929_141531.png">
+  </div>
+ </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+            <div class="card-toolbar node-info">
+            <ul class="list-inline d-none d-sm-block">
+              <li><span class="badge fail-bg log ">Fail</span></li>
+              <li title="Time taken"><span class='badge badge-default'>0.04</span></li>
+            </ul>
+          </div>
+          <div class="card-title">
+            <div class="node" id="26">When</div>
+              <div class="desc">I transfer 50.00 from account "13455" to account "13566"</div>
+              <div class="status-avatar float-right"><i class="fa fa-paperclip"></i></div>
+          </div>
+        </div>
+        <div class="">
+          <div class="card-body">
+            <div class="detail-body mt-4">
+
+
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>Sep 29, 2025 14:16:05</td>
+        <td>
+Timeout 30000ms exceeded.
+Call log:
+  - waiting for Locator("select[id='toAccountId']")
+    - locator resolved to <select class="input" id="toAccountId">…</select>
+  - attempting select option action
+    2 × waiting for element to be visible and enabled
+      - did not find some options
+    - retrying select option action
+    - waiting 20ms
+    2 × waiting for element to be visible and enabled
+      - did not find some options
+    - retrying select option action
+      - waiting 100ms
+    52 × waiting for element to be visible and enabled
+       - did not find some options
+     - retrying select option action
+       - waiting 500ms        </td>
+      </tr>
+  </tbody>
+</table>            </div>
+
+  <div class="row mb-3">
+   <div class="col-md-3">
+     <img data-featherlight='Screenshots\Transfer funds between checking and savings_I transfer 50.00 from account _13455_ to account _13566__20250929_141602.png' src="Screenshots\Transfer funds between checking and savings_I transfer 50.00 from account _13455_ to account _13566__20250929_141602.png">
+  </div>
+ </div>
+          </div>
+        </div>
+      </div>
+  </div>
+      </div>
+  </div>
+</div> 
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="test-content scrollable">
+    <div class="test-content-tools">
+      <ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+    </div>
+    <div class="test-content-detail"><div class="detail-body"></div></div>
+  </div>
+</div>
+
+     
+
+<div class="container-fluid p-4 view dashboard-view">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="card"><div class="card-body">
+          <p class="m-b-0">Started</p>
+          <h3>29-09-2025 14:13:44</h3>
+      </div></div>
+    </div>
+    <div class="col-md-3">
+      <div class="card"><div class="card-body">
+          <p class="m-b-0">Ended</p>
+          <h3>29-09-2025 14:16:06</h3>
+      </div></div>
+    </div>
+    <div class="col-md-3">
+      <div class="card"><div class="card-body">
+          <p class="m-b-0 text-pass">Tests Passed</p>
+          <h3>2</h3>
+      </div></div>
+    </div>
+    <div class="col-md-3">
+      <div class="card"><div class="card-body">
+          <p class="m-b-0 text-fail">Tests Failed</p>
+          <h3>2</h3>
+      </div></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <div class="card">
+        <div class="card-header">
+          <h6 class="card-title">Tests</h6>
+        </div>
+        <div class="card-body">
+          <div class="">
+            <canvas id='parent-analysis' width='115' height='90'></canvas>
+          </div>
+        </div>
+        <div class="card-footer">
+          <div><small data-tooltip='0%'>
+            <b>2</b> tests passed
+            </small>
+          </div>
+          <div>
+            <small data-tooltip='0%'><b>2</b> tests failed, 
+            <b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+            </small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <div class="card-header">
+          <h6 class="card-title">Steps</h6>
+        </div>
+        <div class="card-body">
+          <div class="">
+            <canvas id='child-analysis' width='115' height='90'></canvas>
+          </div>
+        </div>
+        <div class="card-footer">
+          <div><small data-tooltip='0%'><b>3</b> steps passed</small></div>
+          <div>
+            <small data-tooltip='0%'><b>2</b> steps failed, 
+            <b>0</b> skipped, <b data-tooltip='%'>0</b> others
+            </small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <div class="card-header">
+          <h6 class="card-title"></h6>
+        </div>
+        <div class="card-body">
+          <div class="">
+            <canvas id='grandchild-analysis' width='115' height='90'></canvas>
+          </div>
+        </div>
+        <div class="card-footer">
+          <div><small data-tooltip='0%'><b>15</b>  passed</small></div>
+          <div>
+            <small data-tooltip='0%'><b>2</b>  failed, 
+            <b>0</b> skipped, <b data-tooltip='%'>0</b> others
+            </small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <div class="card-header">
+          <h6 class="card-title">Log events</h6>
+        </div>
+        <div class="card-body">
+          <div class="">
+            <canvas id='events-analysis' width='115' height='90'></canvas>
+          </div>
+        </div>
+        <div class="card-footer">
+          <div><small data-tooltip='0%'><b>15</b> events passed</small></div>
+          <div>
+            <small data-tooltip='0%'><b>2</b> events failed, 
+            <b data-tooltip='%'>0</b> others
+            </small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row"><div class="col-md-12">
+    <div class="card"><div class="card-header"><p>Timeline</p></div>
+      <div class="card-body pt-0"><div>
+        <canvas id="timeline" height="120"></canvas>
+      </div></div>
+    </div>
+  </div></div>
+  <script>
+	var timeline = { "Accounts Overview":64483.8774,"Bill Pay":13977.8361,"Login":20728.347,"Transfer Funds":39241.3177 };
+  </script>
+  <div class="row">
+      <div class="col-md-4 sysenv-container">
+      <div class="card">
+        <div class="card-header"><p>System/Environment</p></div>
+        <div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+          <thead><tr class="bg-gray"><th>Name</th><th>Value</th></tr></thead>
+          <tbody>
+            <tr>
+              <td>Tester</td>
+              <td>Tina R. Patil</td>
+            </tr>
+            <tr>
+              <td>Environment</td>
+              <td>QA</td>
+            </tr>
+            <tr>
+              <td>Browser</td>
+              <td>Chromium</td>
+            </tr>
+          </tbody>
+        </table></div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  var statusGroup = {
+    parentCount: 4,
+    childCount: 5,
+    grandChildCount: 17,
+    eventsCount: 17,
+
+passParent:2,failParent:2,warningParent:0,skipParent:0,    
+passChild:3,failChild:2,warningChild:0,skipChild:0,infoChild:0,    
+passGrandChild:15,failGrandChild:2,warningGrandChild:0,skipGrandChild:0,infoGrandChild:0,    
+passEvents:15,failEvents:2,warningEvents:0,skipEvents:0,infoEvents:0,  };
+</script>
+
+    </div>
+   </div>
+  </div>
+ </div>
+ <script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@c439bdbc7bade3d85af3b90e9e69c30ebc87445f/spark/js/spark-script.js"></script>
+<script type='text/javascript'></script>
+</body>
+</html>
