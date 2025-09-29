@@ -1,6 +1,6 @@
 # Parabank BDD Automation
 
-This project demonstrates a robust BDD-style automation framework that automates end-to-end testing of the Parabank web application in **C#** using **Playwright**, **Reqnroll (SpecFlow fork)**, and **BDD-style step definitions**. It showcases modular design, reusable components that includes resilient fallback logic, screenshot capture, parallel execution, cross-browser configuration, externalized credentials and CI integration via GitHub Actions.
+This project demonstrates a robust BDD-style automation framework that automates end-to-end testing of the Parabank web application in **C#** using **Playwright**, **Reqnroll (SpecFlow fork)**, and **BDD-style step definitions**. It showcases modular design, reusable components that includes resilient fallback logic, screenshot capture, parallel execution, cross-browser configuration, externalized credentials, **CI integration via GitHub** Actions and Performance testing using **K6**.
 
 ---
 
@@ -29,6 +29,7 @@ This project demonstrates a robust BDD-style automation framework that automates
    - Generates `.trx` logs and optional ExtentReport HTML  
    - Screenshots captured on failure or fallback  and success
    - CI artifacts uploaded via GitHub Actions
+   - Performance testing via K6
 
 ---
 
@@ -37,7 +38,7 @@ This project demonstrates a robust BDD-style automation framework that automates
 ### Prerequisites
 
 - [.NET SDK 8.0+](https://dotnet.microsoft.com/en-us/download)
-- [Node.js (for Playwright CLI)](https://nodejs.org/)
+- [Node.js (for Playwright CLI, K6)](https://nodejs.org/)
 - Git (for version control)
 - Visual Studio 2022+ (recommended)
 
@@ -66,7 +67,7 @@ This project demonstrates a robust BDD-style automation framework that automates
    playwright install
 
 
-### How to Execute the Tests
+### Test Execution
 
 #### Locally
 
@@ -90,11 +91,80 @@ dotnet test --settings test.runsettings --logger "trx"
 
 ##### CI (GitHub Actions)
 
-1. Push to main or open a pull request. The workflow in .github/workflows/test.yml will:
+1. Push to master or open a pull request. The workflow in .github/workflows/test.yml will:
    a. Build the solution
    b. Install Playwright CLI and browsers
    c. Run tests with fallback logic
    d. Upload screenshots, .trx logs, and ExtentReport
+
+### Performance Test Execution
+
+#### Locally
+To run the test locally:
+
+1. **Install K6**  
+   - Via [Node.js](https://nodejs.org/en/download):  
+     ```bash
+     npm install -g k6
+     ```
+   - Or via [Chocolatey](https://community.chocolatey.org/packages/k6):  
+     ```bash
+     choco install k6
+     ```
+
+2. **Execute the test**  
+   ```bash
+   k6 run ParabankBDDAutomation/Performance/login-test.js
+   ```
+
+#### CI Integration
+
+K6 is integrated into GitHub Actions via `.github/workflows/performance.yml`. On every push to `master` or manual trigger:
+
+- K6 runs the login performance test
+- A summary report is exported to `k6-results/summary.json`
+- Artifacts are uploaded for review under **Actions → K6 Performance Test**
+
+> ✅ This ensures performance regressions are caught early and metrics are traceable across builds.
+
+---
+
+### 📈 Sample Metrics Captured
+
+- ✅ Request duration
+- ✅ Success rate
+- ✅ Failed checks
+- ✅ Throughput (requests/sec)
+
+---
+
+## 📦 Functional Automation
+
+The framework supports:
+
+- Playwright-based UI automation
+- SpecFlow/Reqnroll step definitions
+- Parallel execution, cross-browser configuration, externalized credentials
+- ExtentReports with embedded screenshots
+- CI-ready execution with parallel support
+- CI-ready execution with Performance testing
+  
+---
+
+## 🧾 Reporting
+
+Test results are saved to:
+
+```
+Reports/ExtentReport.html
+Reports/Screenshots/
+```
+
+Screenshots are embedded per step and uploaded as CI artifacts for traceability.
+
+---
+
+
 
 ### Project Structure
    ```bash
@@ -110,6 +180,7 @@ dotnet test --settings test.runsettings --logger "trx"
    │   └── CredentialSettings.cs     # Secure model for username/password or token-based auth
    ├── Reports/               # ExtentReport.html (optional)
    ├── Screenshots/           # Captured on failure or fallback
+   ├── Performance/           # Performance scripts using K6
    ├── test.runsettings       # Parallel execution config
    └── ParabankBDDAutomation.csproj
    ```
