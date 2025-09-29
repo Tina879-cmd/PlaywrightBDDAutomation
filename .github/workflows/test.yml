@@ -1,0 +1,57 @@
+name: Playwright BDD Tests
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  test:
+    runs-on: windows-latest
+
+    strategy:
+      matrix:
+        browser: [chromium] # Add firefox, webkit if needed
+
+    env:
+      BROWSER: ${{ matrix.browser }}
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '8.0.x'
+
+    - name: Restore dependencies
+      run: dotnet restore
+
+    - name: Build solution
+      run: dotnet build --configuration Release
+      
+    - name: Install Playwright CLI
+      run: dotnet tool install --global Microsoft.Playwright.CLI
+
+    - name: Install Playwright Browsers
+      run: playwright install
+      
+    - name: Run tests with runsettings
+      run: dotnet test --settings test.runsettings --logger "trx"
+      continue-on-error: true
+
+    - name: Upload ExtentReport and Screenshots
+      uses: actions/upload-artifact@v4
+      with:
+        name: TestReport
+        path: |
+         Reports/ExtentReport.html
+         Reports/Screenshots/
+
+    - name: Upload test results
+      uses: actions/upload-artifact@v4
+      with:
+        name: TestResults
+        path: '**/*.trx'
